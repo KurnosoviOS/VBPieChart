@@ -101,6 +101,18 @@ IB_DESIGNABLE
  */
 @property (nonatomic) IBInspectable double startAngle;
 
+/*!
+ @abstract strokeWidth
+ @note Default 0.
+ */
+@property (nonatomic) IBInspectable double strokeWidth;
+
+/*!
+ @abstract strokeWidth
+ @note Default 0.
+ */
+@property (nonatomic) UIFont *labelsFont;
+
 
 /*!
  @abstract Set new value by index for already exist piece. Animated.

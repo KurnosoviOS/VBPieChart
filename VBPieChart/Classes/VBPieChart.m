@@ -290,6 +290,8 @@ static __inline__ CGFloat CGPointDistanceBetweenTwoPoints(CGPoint point1, CGPoin
         
         VBPiePieceData *data = [VBPiePieceData pieceDataWith:options];
         data.index = index;
+        data.strokeWidth = self.strokeWidth;
+        data.labelsFont = self.labelsFont;
         
         CGFloat pieceValuePrecents = fabs([data.value doubleValue])/onePrecent;
         CGFloat pieceAngle = onePrecentOfChart*pieceValuePrecents;
@@ -449,9 +451,12 @@ static __inline__ CGFloat CGPointDistanceBetweenTwoPoints(CGPoint point1, CGPoin
         _hitLayer = (VBPiePiece*)[self layerForTouch:touch];
         
         if (_hitLayer.accentPrecent < FLT_EPSILON) {
-            [_hitLayer animateToAccent:_maxAccentPrecent];
+//            _hitLayer.innerRadius = 2;
+//            _hitLayer.frame = CGRectMake(_hitLayer.frame.origin.x, _hitLayer.frame.origin.x, _hitLayer.frame.size.width, _hitLayer.frame.size.width);
+//            _hitLayer.transform = CATransform3DScale(CATransform3DIdentity, 1.1, 1.1, 0);
         } else {
-            [_hitLayer animateToAccent:0];
+//            _hitLayer.frame = CGRectMake(_hitLayer.frame.origin.x, _hitLayer.frame.origin.x, _hitLayer.frame.size.width, _hitLayer.frame.size.width - 20);
+//            _hitLayer.transform = CATransform3DScale(CATransform3DIdentity, 1.0, 1.0, 0);
         }
     }
 }

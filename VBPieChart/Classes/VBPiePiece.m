@@ -91,6 +91,7 @@
         }
         
         
+        
         data.accent = [options[@"accent"] boolValue];
     } else {
         data.value = (NSNumber*)object;
@@ -159,6 +160,16 @@
     }
     if (data.strokeColor) {
         self.strokeColor = data.strokeColor.CGColor;
+    }
+    
+    if (data.strokeWidth) {
+        self.lineWidth = data.strokeWidth;
+    } else {
+        self.lineWidth = 0;
+    }
+    
+    if (data.labelsFont) {
+        self.label.font = (__bridge CFTypeRef _Nullable)(data.labelsFont.fontName);
     }
 }
 

@@ -19,6 +19,8 @@
 @property (nonatomic, retain) UIColor *color;
 @property (nonatomic, retain) UIColor *labelColor;
 @property (nonatomic, retain) UIColor *strokeColor;
+@property (nonatomic) double strokeWidth;
+@property (nonatomic) UIFont *labelsFont;
 @property (nonatomic) BOOL accent;
 
 + (UIColor*) defaultColors:(NSInteger)index;

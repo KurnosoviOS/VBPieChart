@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "VBPieChart"
-  s.version      = "1.2.1"
+  s.version      = "1.2.4"
   s.summary      = "Pie Chart with different animations to present."
 
   s.description  = <<-DESC
